@@ -1,25 +1,29 @@
 import React from "react";
-import NavListMenu from "../NavListMenu/NavListMenu";
 import { Typography, MenuItem } from "@material-tailwind/react";
 import {
-  CubeTransparentIcon,
-  UserCircleIcon,
-  CodeBracketSquareIcon,
+  QueueListIcon,
+  QuestionMarkCircleIcon,
+  MoonIcon,
+  PencilSquareIcon,
 } from "@heroicons/react/24/outline";
 
 // nav list component
 const navListItems = [
   {
-    label: "Account",
-    icon: UserCircleIcon,
+    label: "Courses",
+    icon: QueueListIcon,
   },
   {
-    label: "Blocks",
-    icon: CubeTransparentIcon,
+    label: "Blog",
+    icon: PencilSquareIcon,
   },
   {
-    label: "Docs",
-    icon: CodeBracketSquareIcon,
+    label: "FAQ",
+    icon: QuestionMarkCircleIcon,
+  },
+  {
+    label: "Dark",
+    icon: MoonIcon,
   },
 ];
 
@@ -27,7 +31,6 @@ const NavList = () => {
   return (
     <>
       <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
-        <NavListMenu />
         {navListItems.map(({ label, icon }, key) => (
           <Typography
             key={label}

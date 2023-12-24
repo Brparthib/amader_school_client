@@ -4,6 +4,7 @@ import {
   MobileNav,
   Typography,
   IconButton,
+  Collapse,
 } from "@material-tailwind/react";
 import { Bars2Icon } from "@heroicons/react/24/outline";
 import NavList from "../NavList/NavList";
@@ -24,14 +25,13 @@ const ComplexNavbar = () => {
 
   return (
     <>
-      <Navbar className="mx-auto max-w-screen-xl p-2 lg:rounded-full lg:pl-6">
+      <Navbar className="bg-[#999cb5] mx-auto max-w-screen-xl p-2 lg:rounded-full lg:pl-6">
         <div className="relative mx-auto flex items-center text-blue-gray-900">
           <img className="w-8" src={logo} alt="" />
           <Typography
             as="a"
             href="#"
-            className="text-xl mr-4 ml-2 cursor-pointer py-1.5 font-medium text-deep-orange-400"
-            color=""
+            className="text-xl mr-4 ml-2 cursor-pointer py-1.5 font-medium text-white"
           >
             Amader School
           </Typography>
@@ -49,9 +49,9 @@ const ComplexNavbar = () => {
           </IconButton>
           <ProfileMenu />
         </div>
-        <MobileNav open={isNavOpen} className="overflow-scroll">
+        <Collapse open={isNavOpen} className="overflow-scroll">
           <NavList />
-        </MobileNav>
+        </Collapse>
       </Navbar>
     </>
   );
